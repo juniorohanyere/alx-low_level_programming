@@ -32,10 +32,8 @@ int numLength(int num)
 /**
  * main - Entry point
  *
- * Description: prints the first 98 Fibonacci numb
-ers
- *      starting with 1 and 2 followed by a new li
-ne
+ * Description: prints the first 98 Fibonacci numbers
+ *      starting with 1 and 2 followed by a new line
  *
  *      Solution was copied from Nobert Patrick
  *      Wise, github handle: Trikcode
