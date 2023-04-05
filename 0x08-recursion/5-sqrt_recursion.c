@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion_wrapper - a wrapper that does the recursion bit
+ * _sqrt - a wrapper that does the recursion bit
  *
  * @n: input number
  * @i: iterator
