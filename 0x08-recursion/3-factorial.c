@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * factorial - function to return
  *		the factorial of a given number
