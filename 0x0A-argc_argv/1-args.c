@@ -19,7 +19,7 @@ int main(int argc, char __attribute__((unused)) *argv[])
 	while (i < argc)
 	{
 		j = i;
-		i ++;
+		i++;
 	}
 	printf("%d\n", j);
 
