@@ -12,12 +12,16 @@
  * Return: Always return 0
 */
 
-int main(int __attribute__((unused)) argc,
-	char __attribute__((unused)) *argv[])
+int main(int argc, char __attribute__((unused)) *argv[])
 {
-	int i = 0;
+	int i = 0, j;
 
-	printf("%d\n", i);
+	while (i < argc)
+	{
+		j = i;
+		i ++;
+	}
+	printf("%d\n", j);
 
 	return (0);
 }
