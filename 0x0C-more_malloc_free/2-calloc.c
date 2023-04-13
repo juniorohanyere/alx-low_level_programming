@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * mem_fill - function to fill memory with a constant byte
+ * _memset - function to fill memory with a constant byte
  *
  * @s: input pointer that represents memory block to fill
  * @b: characters to fill
@@ -11,12 +11,15 @@
  * Return: return a pointer
 */
 
-char *mem_fill(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
+	{
 		s[i] = b;
+	}
+
 	return (s);
 }
 
@@ -38,6 +41,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ptr = malloc(nmemb * size);
 	if (ptr == NULLL)
 		return (NULL);
-	mem_fill(ptr, 0, nmemb * size);
+	_memset(ptr, 0, nmemb * size);
 	return (ptr);
 }
