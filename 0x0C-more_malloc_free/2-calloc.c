@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <main.h>
 
 /**
  * mem_fill - function to fill memory with a constant byte
