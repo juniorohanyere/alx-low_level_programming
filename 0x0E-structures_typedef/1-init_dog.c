@@ -3,7 +3,7 @@
 /**
  * init_dog - initialize dog struct
  *
- * @ndog: input pointer to struct dog
+ * @d: input pointer to struct dog
  * @name: dog name
  * @age: dog age
  * @owner: dog owner
@@ -11,12 +11,12 @@
  * Return: return nothing
 */
 
-void init_dog(struct dog *ndog, char *name, float age, char *owner)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (ndog)
+	if (d)
 	{
-		ndog->name = name;
-		ndog->age = age;
-		ndog->owner = owner;
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
 	}
 }
