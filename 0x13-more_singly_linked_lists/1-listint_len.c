@@ -3,6 +3,8 @@
 /**
  * listint_len - function that returns the number of element in a linked list
  *
+ * @h: pointer to head first node
+ *
  * Return: return the number of the elements (count)
 */
 
