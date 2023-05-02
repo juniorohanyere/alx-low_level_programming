@@ -19,7 +19,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (a && b && b->next)
 	{
-		if (!(b->next->next))
+		if ((b->next->next) == NULL)
 			break;
 		a = a->next;
 		b = b->next->next;
