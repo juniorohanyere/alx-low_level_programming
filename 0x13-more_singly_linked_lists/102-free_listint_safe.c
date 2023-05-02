@@ -14,20 +14,25 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t p = 0;
-	listint_t *list, *node;
+	listint_t *list = NULL;
 
 	if (h == NULL || *h == NULL)
-		return (0);
-	list = *h;
-	*h = NULL;
-	while (list != NULL)
+		return (p);
+	while (*h)
 	{
 		p++;
-		node = list->next;
-		if (node >= list)
-			break;
-		list = node;
-		free(list);
+		if (*h > (*h)->next)
+		{
+			list = *h;
+			*h = (*h)->next;
+			free(list);
+		}
+		else
+		{
+			free(*h);
+			*h = NULL;
+		}
 	}
+	*h = NULL;
 	return (p);
 }
