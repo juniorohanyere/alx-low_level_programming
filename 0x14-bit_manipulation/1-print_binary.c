@@ -8,7 +8,7 @@
  * Return: return the length calculated
 */
 
-int length(unsigned long int n)
+int intlen(unsigned long int n)
 {
 	int l = 0;
 
@@ -36,7 +36,7 @@ void print_binary(unsigned long int n)
 	int l;
 	unsigned long int m = 1;
 
-	l = length(n);
+	l = intlen(n);
 
 	if (l > 0)
 		m <<= l;
