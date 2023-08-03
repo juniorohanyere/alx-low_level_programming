@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _strlen - function to calculate the length of a string
+ * _strlen - function that calculates the length of a string
  *
  * @str: string to calculate its length
  *
@@ -23,11 +23,11 @@ unsigned int _strlen(const char *str)
 }
 
 /**
- * char_to_int - function to convert a char to an integer
+ * char_to_int - converts a char to an integer
  *
  * @c: char to be converted to int
  *
- * Return: return the converted char (unsigned integer)
+ * Return: return the converted char (integer)
 */
 
 unsigned int char_to_int(char c)
@@ -47,7 +47,7 @@ unsigned int char_to_int(char c)
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
-	unsigned int c = 0, j = 1, n = 0;
+	unsigned int count = 0, j = 1, n = 0;
 
 	if (b == NULL)
 		return (0);
@@ -58,9 +58,9 @@ unsigned int binary_to_uint(const char *b)
 
 		if (n != 0 && n != 1)
 			return (0);
-		c += n * j;
+		count += n * j;
 		j *= 2;
 	}
 
-	return (c);
+	return (count);
 }
