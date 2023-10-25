@@ -1,0 +1,38 @@
+# the compiler
+CC = gcc
+
+# compiler flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# the source files
+SRC = main.c school.c
+
+# the object files
+OBJ = $(SRC:.c=.o)
+
+# the name of the executable
+NAME = school
+
+# makefile should work even if there is a file in the folder that has the same
+# name as one of the rules
+.PHONY: all clean oclean fclean re
+
+# builds the executable
+# makefile should not compile if 'm.h' header file is missing
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# deletes all Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~ $(NAME)
+
+# deletes the object files
+oclean:
+	$(RM) $(OBJ)
+
+# deletes all Emacs and Vim temporary files, the executable, and the object
+# files
+fclean: clean oclean
+
+# forces recompilation of all source files
+re: fclean all
